@@ -602,6 +602,8 @@ return [
     'flutterwave_title'                         => 'Flutterwave',
     'payfast_title'                             => 'Payfast',
     'iyzipay_title'                             => 'IyziPay',
+    'moneroo_title'                             => 'Moneroo',
+    'moneroo_payment_title'                     => 'Moneroo payment settings',
     'stripe_payment_title'                      => 'Stripe payment settings',
     'stripe_key'                                => 'Stripe key',
     'stripe_secret'                             => 'Stripe secret',

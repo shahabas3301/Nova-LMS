@@ -11,190 +11,228 @@ use Modules\LaraPayease\Drivers\Paytm;
 use Modules\LaraPayease\Drivers\RazorPay;
 use Modules\LaraPayease\Drivers\Stripe;
 use Modules\LaraPayease\Utils\CurrencyUtil;
+use Modules\LaraPayease\Drivers\Moneroo;
 
-class PaymentFactory {
 
-   /**
-    * @return \Modules\LaraPayease\Drivers\Stripe
-    */
+class PaymentFactory
+{
 
-    public function stripe(): Stripe{
+    /**
+     * @return \Modules\LaraPayease\Drivers\Stripe
+     */
+
+    public function stripe(): Stripe
+    {
         return new Stripe();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\RazorPay
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\RazorPay
+     */
 
-     public function razorpay(): RazorPay{
+    public function razorpay(): RazorPay
+    {
         return new RazorPay();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\Paystack
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Paystack
+     */
 
-     public function paystack(): Paystack{
+    public function paystack(): Paystack
+    {
         return new Paystack();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\Paytm
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Paytm
+     */
 
-     public function paytm(): Paytm{
+    public function paytm(): Paytm
+    {
         return new Paytm();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\Flutterwave
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Flutterwave
+     */
 
-     public function flutterwave(): Flutterwave{
+    public function flutterwave(): Flutterwave
+    {
         return new Flutterwave();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\Payfast
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Payfast
+     */
 
-     public function payfast(): PayFast{
+    public function payfast(): PayFast
+    {
         return new PayFast();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\Paypal
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Paypal
+     */
 
-     public function paypal(): Paypal{
+    public function paypal(): Paypal
+    {
         return new Paypal();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Drivers\Iyzipay
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Iyzipay
+     */
 
-     public function iyzipay(): Iyzipay{
+    public function iyzipay(): Iyzipay
+    {
         return new Iyzipay();
-     }
+    }
 
-     /**
-      * @return \Modules\LaraPayease\Utils\CurrencyUtil\supportedCurrencies
-      */
+    /**
+     * @return \Modules\LaraPayease\Drivers\Moneroo
+     */
+    public function moneroo(): Moneroo
+    {
+        return new Moneroo();
+    }
 
-     public function supportedCurrencies(): array{
+
+    /**
+     * @return \Modules\LaraPayease\Utils\CurrencyUtil\supportedCurrencies
+     */
+
+    public function supportedCurrencies(): array
+    {
         return CurrencyUtil::$supportedCurrencies;
-     }
+    }
 
-      /**
-       * @return array $supportedGateways
-       */
-     public function supportedGateways() : array{
+    /**
+     * @return array $supportedGateways
+     */
+    public function supportedGateways(): array
+    {
         return [
-           'stripe' => [
-              'keys' => [
-                 'stripe_key' => '',
-                 'stripe_secret' => '',
-              ],
-              'status' => 'off',
-              'currency' => 'USD',
-              'exchange_rate' => '',
-              'ipn_url_type' => 'get.success'
-          ],
-          'paypal' => [
-              'status' => 'off',
-              'keys' => [
-                  'client_id' => '',
-                  'secret_id' => '',
-              ],
-              'currency' => 'USD',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'get.success'
-          ],
-          'razorpay' => [
-              'status' => 'off',
-              'keys' => [
-                  'public_key' => '',
-                  'secret_key' => '',
-              ],
-              'currency' => 'INR',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'post.success'
-          ],
-          'paystack' => [
-              'status' => 'off',
-              'keys' => [
-                  'email' => '',
-                  'public_key' => '',
-                  'secret_key' => '',
-              ],
-              'currency' => 'ZAR',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'get.success'
-          ],
-          'paytm' => [
-              'status' => 'off',
-              'keys' => [
-                  'app_id' => '',
-                  'app_key' => '',
-                  'website' => '',
-                  'chennel' => '',
-                  'industry_type' => '',
-              ],
-              'currency' => 'INR',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'post.success'
-          ],
-          'flutterwave' => [
-              'status' => 'off',
-              'keys' => [
-                  'public_key' => '',
-                  'secret_key' => '',
+            'stripe' => [
+                'keys' => [
+                    'stripe_key' => '',
+                    'stripe_secret' => '',
+                ],
+                'status' => 'off',
+                'currency' => 'USD',
+                'exchange_rate' => '',
+                'ipn_url_type' => 'get.success'
+            ],
+            'paypal' => [
+                'status' => 'off',
+                'keys' => [
+                    'client_id' => '',
+                    'secret_id' => '',
+                ],
+                'currency' => 'USD',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'get.success'
+            ],
+            'razorpay' => [
+                'status' => 'off',
+                'keys' => [
+                    'public_key' => '',
+                    'secret_key' => '',
+                ],
+                'currency' => 'INR',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'post.success'
+            ],
+            'paystack' => [
+                'status' => 'off',
+                'keys' => [
+                    'email' => '',
+                    'public_key' => '',
+                    'secret_key' => '',
+                ],
+                'currency' => 'ZAR',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'get.success'
+            ],
+            'paytm' => [
+                'status' => 'off',
+                'keys' => [
+                    'app_id' => '',
+                    'app_key' => '',
+                    'website' => '',
+                    'chennel' => '',
+                    'industry_type' => '',
+                ],
+                'currency' => 'INR',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'post.success'
+            ],
+            'flutterwave' => [
+                'status' => 'off',
+                'keys' => [
+                    'public_key' => '',
+                    'secret_key' => '',
 
-              ],
-              'currency' => 'USD',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'get.success'
-          ],
-          'payfast' => [
-              'status' => 'off',
-              'keys' => [
-                  'merchant_id' => '',
-                  'merchant_key' => '',
-                  'pass_phrase' => '',
-              ],
-              'currency' => 'ZAR',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'get.success'
-          ],
-          'iyzipay' => [
-            'status' => 'off',
-              'keys' => [
-                  'api_key' => '',
-                  'secret_key' => '',
-              ],
-              'currency' => 'TRY',
-              'exchange_rate' => '',
-              'enable_test_mode' => false,
-              'ipn_url_type' => 'post.success'
-          ]
+                ],
+                'currency' => 'USD',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'get.success'
+            ],
+            'payfast' => [
+                'status' => 'off',
+                'keys' => [
+                    'merchant_id' => '',
+                    'merchant_key' => '',
+                    'pass_phrase' => '',
+                ],
+                'currency' => 'ZAR',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'get.success'
+            ],
+            'iyzipay' => [
+                'status' => 'off',
+                'keys' => [
+                    'api_key' => '',
+                    'secret_key' => '',
+                ],
+                'currency' => 'TRY',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                'ipn_url_type' => 'post.success'
+            ],
+            'moneroo' => [
+                'status' => 'off',
+                'keys' => [
+                    'secret_key' => '', // your Moneroo secret key
+                    // if you also store public key / app id, add them here
+                ],
+                // pick the default currency you want to use with Moneroo
+                // Moneroo itself supports XOF, XAF, etc., but you can keep it configurable :contentReference[oaicite:5]{index=5}
+                'currency' => 'USD',
+                'exchange_rate' => '',
+                'enable_test_mode' => false,
+                // Moneroo redirects with GET to your return_url, so GET is fine
+                'ipn_url_type' => 'get.success',
+            ],
+
         ];
-     }
+    }
 
-      /**
-       * @return string $getIpnUrl
-       */
-     public function getIpnUrl($method): string {
-          $gateWays = $this->supportedGateways();
-          if(!empty($gateWays[$method]['ipn_url_type'])) {
-              return $gateWays[$method]['ipn_url_type'];
-          }
-          return '';
-     }
+    /**
+     * @return string $getIpnUrl
+     */
+    public function getIpnUrl($method): string
+    {
+        $gateWays = $this->supportedGateways();
+        if (!empty($gateWays[$method]['ipn_url_type'])) {
+            return $gateWays[$method]['ipn_url_type'];
+        }
+        return '';
+    }
 }
