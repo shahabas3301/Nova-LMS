@@ -1,0 +1,253 @@
+
+@media (max-width: 1680px) {
+    .fw-forum_lists_food{
+        .fw-forum_item{
+            align-items: flex-start;
+        }
+    }
+    .fw-forum-topic-wrapper .fw-forum_item_action,
+    .fw-forum-topic-wrapper .fw-forum-stats-wrapper{
+        gap: 15px;
+    }
+    .fw-forum-topic-wrapper .fw-searhcoption{
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .fw-forum-topic-wrapper .fw-forum-stats-wrapper .fw-forum-stats-info{
+        .fw-forum-stats{
+            flex-wrap: wrap;
+        }
+    }
+    .fw-main-explore .fw-banner-content-main .fw-author-main{
+        margin-left: 0;
+    }
+}
+@media (max-width: 1560px) {
+    .fw-main-explore .fw-banner-content-main .fw-author-main{
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .fw-main-explore .fw-banner-content-main .fw-author-main .fw-author{
+        width: 30%;
+    }
+    .fw-main-explore .fw-banner-content-main .fw-author-main .fw-author .fw-author-content{
+        flex-shrink: 0;
+    }
+}
+@media (max-width: 1360px) {
+    .fw-topic-main{
+        max-width: 100%;
+    }
+    .fw-banner-wraper{
+        flex-direction: column-reverse;
+    }
+    .fw-banner-wraper .fw-forum-top-users-main{
+        max-width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        .fw-forum-top-users{
+            width: 100%;
+        }
+        .fw-forum-users-tags{
+            width: 48%;
+        }
+    }
+    .fw-forum-top-users-main{
+        .fw-forum-users-tags{
+            width: 100% !important;
+        }
+    }
+}
+@media (max-width: 1300px) {
+    .fw-main-explore .fw-banner-content-main .fw-banner-main .fw-banner-content{
+        width: auto;
+    }
+    .fw-main-explore .fw-banner-content-main .fw-banner-main{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1280px) {
+    .fw-forum_item_title{
+        margin-bottom: 12px;
+    }
+    .fw-main-explore .fw-banner-content-main .fw-author-main .fw-author{
+        width: auto;
+    }
+    .fw-main-explore .fw-banner-content-main .fw-author-main{
+        gap: 20px 40px;
+    }
+}
+@media (max-width: 1080px) {
+    .fw-forum_content{
+        flex-direction: column-reverse;
+    }
+    .fw-forum_info{
+        max-width: 100%;
+    }
+    .fw-forum_info_card{
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            gap: 5px;
+            margin: 0;
+            flex-grow: 1;
+        }
+        li + li{
+            margin: 0;
+        }
+    }
+    .fw-forum_info_card li:before{
+        top: 2px;
+        left: 2px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+    }
+}
+@media (max-width: 992px) {
+    .fw-main-explore .fw-banner{
+        flex-direction: column;
+        .fw-contribute{
+            border-left: 0;
+            max-width: 100%;
+            border-top: 1px solid $border-color;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .fw-villy-about{
+        gap: 10px;
+    }
+}
+@media (max-width: 940px) {
+    .fw-forum_info_card li{
+        width: 48%;
+        flex-grow: unset;
+    }
+}
+@media (max-width: 767px) {
+    .fw-banner-wraper .fw-david-list > li ul{
+        margin-left: 40px;
+    }
+    .fw-banner-wraper .fw-david-list > li ul li::after{
+        left: -20px;
+        width: 1.9%;
+    }
+}
+@media (max-width: 640px) {
+    .fw-banner-wraper .fw-david-list > li ul{
+        margin-left: 20px;
+    }
+    .fw-banner-wraper .fw-david-list > li ul li::before,
+    .fw-banner-wraper .fw-david-list > li ul li::after,
+    .fw-banner-wraper .fw-david-list > li::before{
+        display: none;
+    }
+    .fw-banner-wraper .fw-forum-top-users-main .fw-forum-users-tags{
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .fw-forum_info_card li{
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .fw-searhcoption{
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .fw-searhcoption_form{
+        max-width: 100% !important;
+    }
+    .fw-forum_banner{
+        padding: 30px !important;
+    }
+    .fw-forum-content-main{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .fw-villy-paragraph{
+        gap: 10px;
+    }
+    // .fw-banner-wraper .fw-david-list > li ul {
+    //     margin: 30px 0 0 30px;
+    // }
+    .fw-banner-wraper .fw-david-list > li > ul li::after {
+        width: 2%;
+        left: -9px;
+        border-left: 0;
+        border-radius: 0;
+    }
+}
+@media (max-width: 480px){
+    .fw-forum_item{
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .fw-main-explore,
+    .fw-forumwrap{
+        padding: 30px 20px;
+    }
+    .fw-main-explore .fw-banner-content-main .fw-banner-main .fw-tab-content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    // .fw-banner-wraper .fw-david-list > li ul{
+    //     margin: 20px 0 0 0;
+    // }
+    .fw-david-villy-content{
+        flex-wrap: wrap;
+    }
+    .fw-searchform .form-group{
+        border-radius: 14px;
+    }
+    .fw-searchform .form-group i{
+        top: 20px;
+        font-size: 16px;
+        position: absolute;
+    }
+    .tb-subwrapper .fw-searchform .form-group .form-control{
+        padding: 0 0 0 22px !important;
+    }
+    .tb-subwrapper .fw-searchform .form-group{
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+    .fw-searchform .fw-btn{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .fw-forum_banner_title h1{
+        font-size: 24px;
+    }
+    .fw-topic-main .fw-topic-content {
+        padding: 20px;
+    }
+    .fw-david-list{
+        li > ul {
+            margin-left: 20px !important;
+        }
+    }
+    .fw-villy-about{
+        flex-wrap: wrap;
+    }
+    .fw-topic-main.fw-forum-topic{
+        overflow: auto;
+        .fw-david-list{
+            width: 500px;
+            & + .fw-topic-content-reply{
+                width: 500px;
+            }
+        }
+    }
+}
+@media (max-width: 380px){
+    .fw-modaldialog .fw-uploadfile,
+    .fw-toggle.fw-form-group{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

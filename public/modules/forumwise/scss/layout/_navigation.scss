@@ -1,0 +1,106 @@
+/** ====== Navigation layout Start ====== **/
+.fw-navigation{
+    height: calc(100vh - 123px);
+    min-height: calc(100vh - 123px);
+    padding: 30px 0 24px;
+    nav{
+        overflow: auto;
+        height: 100%;
+        &::-webkit-scrollbar{
+            opacity: 0;
+            visibility: hidden;
+        }
+        &::-webkit-scrollbar{
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb{
+            width: 5px;
+        }
+        &:hover{
+            &::-webkit-scrollbar{
+                opacity: 1;
+                visibility: visible;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-thumb{
+                border-radius: 30px;
+                background:  rgba($color: $text-light, $alpha: 0.3);
+            }
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                list-style-type: none;
+                & + li{
+                    margin-top: 20px;
+                }
+                &:hover{
+                    & > a{
+                        color: $theme-color;
+                        i{
+                            color: $theme-color;
+                            background: rgba(106, 0, 252, 0.06);
+                        }
+                    }
+                }
+                a{
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    @extend %transition;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: rgba($color: $body-font-color, $alpha: 0.7);
+                    font: 500 rem(11)/em(13, 11) $heading-font-family;
+                    span{
+                        display: block;
+                    }
+                    i{
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        font-size: 18px;
+                        margin: 0 0 5px;
+                        @extend %transition;
+                        align-items: center;
+                        border-radius: $radius;
+                        justify-content: center;
+                        background: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &_wrap{
+        width: 100%;
+        height: 100vh;
+        @extend %flex;
+        padding: 20px 0;
+        max-width: 100px;
+        background: $clr-white;
+        flex-direction: column;
+        border-right: 1px solid $border-color;
+    }
+    &_logo{
+        img{
+            display: block;
+            width: 100%;
+            max-width: 43px;
+            margin: 0 auto;
+        }
+    }
+}
+.fw-usermenu{
+    margin-top: auto;
+    & > a{
+        display: block;
+        text-align: center;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+/** ====== Navigation layout End ====== **/

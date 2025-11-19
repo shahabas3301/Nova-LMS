@@ -1,0 +1,78 @@
+/** ====== Social icon ====== **/
+.fw-socialmedia{
+    gap: 10px;
+    @extend %flex;
+    font-size: 15px;
+    list-style: none;
+    line-height: 20px;
+    li{
+        line-height: inherit;
+        list-style-type: none;
+    }
+    a{
+        width: 42px;
+        height: 42px;
+        display: flex;
+        @extend %transition;
+        align-items: center;
+        border-radius: 30px;
+        justify-content: center;
+        background: rgba($clr-white, 0.15);
+        svg,
+        i{
+            display: block;
+        }
+    }
+}
+.fw-facebook > i,
+.fw-facebook > a {color: #3b5999}
+.fw-facebook-messenger > a,
+.fw-facebook-messenger > i {color: #0084ff}
+.fw-twitter> a,
+.fw-twitter > i {color: #55acee}
+.fw-linkedin> a,
+.fw-linkedin > i {color: #0077b5}
+.fw-skype> a,
+.fw-skype > i {color: #00aff0}
+.fw-dropbox> a,
+.fw-dropbox > i {color: #007ee5}
+.fw-vimeo> a,
+.fw-vimeo > i {color: #1ab7ea}
+.fw-tumblr > i,
+.fw-tumblr> a {color: #34465d}
+.fw-yahoo> a,
+.fw-yahoo >i {color: #410093}
+.fw-googleplus> a,
+.fw-googleplus > i,
+.fw-google> a,
+.fw-google > i{color: #dd4b39}
+.fw-pinterestp> a,
+.fw-pinterestp > i {color: #bd081c}
+.fw-youtube> a,
+.fw-youtube > i {color: #cd201f}
+.fw-stumbleupon> a,
+.fw-stumbleupon > i {color: #eb4924}
+.fw-reddit> a,
+.fw-reddit > i {color: #ff5700}
+.fw-quora> a,
+.fw-quora > i {color: #b92b27}
+.fw-yelp> a,
+.fw-yelp > i {color: #af0606}
+.fw-soundcloud> a,
+.fw-soundcloud > i {color: #f30}
+.fw-whatsapp> a,
+.fw-whatsapp > i {color: #25d366}
+.fw-wechat> a,
+.fw-wechat > i {color: #09b83e}
+.fw-instagram> a,
+.fw-instagram > i {color: #e4405f}
+.fw-dribbble> a,
+.fw-dribbble > i {color: #ea4c89}
+.fw-flickr> a,
+.fw-flickr > i {color: #ff0084}
+.fw-rss> a,
+.fw-rss > i {color: #f60}
+.fw-behance> a,
+.fw-behance > i {color: #131418}
+.fw-foursquare> a,
+.fw-foursquare > i {color: #f94877}

@@ -1,0 +1,30 @@
+{
+    "name": "amentotech/meetfusion",
+    "description": "",
+    "authors": [
+        {
+            "name": "AmentoTech",
+            "email": "info@amentotech.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\MeetFusion\\": "app/",
+            "Modules\\MeetFusion\\Database\\Factories\\": "database/factories/",
+            "Modules\\MeetFusion\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\MeetFusion\\Tests\\": "tests/"
+        }
+    }
+}

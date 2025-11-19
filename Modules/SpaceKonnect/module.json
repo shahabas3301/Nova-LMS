@@ -1,0 +1,12 @@
+{
+    "name": "SpaceKonnect",
+    "alias": "spacekonnect",
+    "description": "DigitalOcean Space Integration Addon",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\SpaceKonnect\\Providers\\SpaceKonnectServiceProvider"
+    ],
+    "files": []
+}

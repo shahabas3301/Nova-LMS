@@ -1,0 +1,27 @@
+{
+    "name": "amentotech/starup",
+    "description": "",
+    "authors": [
+        {
+            "name": "AmentoTech",
+            "email": "info@amentotech.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Starup\\Tests\\": "tests/"
+        }
+    }
+}

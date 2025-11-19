@@ -1,0 +1,12 @@
+{
+    "name": "S3konnect",
+    "alias": "s3konnect",
+    "description": "AWS S3 Storage Integration Addon",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\S3konnect\\Providers\\S3konnectServiceProvider"
+    ],
+    "files": []
+}

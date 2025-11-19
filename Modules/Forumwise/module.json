@@ -1,0 +1,12 @@
+{
+    "name": "Forumwise",
+    "alias": "forumwise",
+    "description": "Laravel Community Board",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\Forumwise\\Providers\\ForumwiseServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,174 @@
+.fw-searchform .form-group {
+  padding: 8px 16px 8px 8px;
+}
+
+.fw-forum_list_title {
+  padding-left: 0;
+  padding-right: 17px;
+}
+
+.fw-forum_lists_marketing .fw-forum_list_title .fw-forum-title-mark {
+  right: 0;
+  left: auto;
+}
+
+.fw-modal_title .fw-removemodal {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.fw-selectlist .select2-container .select2-selection::after {
+  left: 13px;
+  right: auto;
+}
+
+.select2-container--open .select2-dropdown {
+  left: -15px;
+}
+
+.fw-forum-top-users-stat span:last-child {
+  padding-left: 0;
+  padding-right: 8px;
+}
+.fw-forum-top-users-stat span:last-child::after {
+  left: auto;
+  right: -1px;
+}
+
+.fw-forum-top-users-stat > a {
+  padding-left: 0;
+  padding-right: 8px;
+}
+.fw-forum-top-users-stat > a::after {
+  left: auto;
+  right: -1px;
+}
+
+.fw-forum-topic-wrapper .fw-forum_auther .fw-forum-stats-main {
+  margin-left: 0;
+  margin-right: 16px;
+}
+.fw-forum-topic-wrapper .fw-forum_auther .fw-forum-stats-main::before {
+  left: auto;
+  right: -17px;
+}
+
+.fw-searhcoption_form .form-control {
+  padding-left: 42px !important;
+}
+.fw-searhcoption_form i {
+  left: 16px;
+  right: auto;
+}
+
+.fw-contribute {
+  border-left: 0;
+  border-right: 1px solid #EAEAEA;
+}
+
+.fw-forum_breadcrumb li:not(:first-child)::before {
+  left: auto;
+  right: -12px;
+}
+
+.fw-banner-wraper .fw-david-list > li::before {
+  left: auto;
+  right: 40px;
+}
+.fw-banner-wraper .fw-david-list > li ul {
+  margin: 40px 60px 0 0;
+}
+.fw-banner-wraper .fw-david-list > li ul li::before {
+  left: auto;
+  right: 20px;
+}
+.fw-banner-wraper .fw-david-list > li ul li::after {
+  left: auto;
+  right: -40px;
+  border-left: 0;
+  border-radius: 0 0 10px 0;
+  border-right: 1px solid #EAEAEA;
+}
+
+.tb-table > thead > tr > th:first-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.tb-table > thead > tr > th:last-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.et-offsidebar .tb-sidebarwrapperholder {
+  width: 20px;
+  transform: translate(300px);
+}
+
+.et-offsidebar .tb-icongray {
+  transform: translate(-72px);
+}
+
+.tb-icongray {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.et-offsidebar .am-header {
+  padding-left: 20px;
+  padding-right: 56px;
+}
+
+.tb-mainwrapper {
+  overflow: hidden;
+}
+
+.am-header {
+  padding: 20px 0 20px 20px;
+}
+.am-header .tb-dropdoenwrap {
+  margin-left: 0;
+  margin-right: auto;
+}
+.am-header .tb-dropdoenwrap .tb-dropdownlist {
+  left: 0;
+  right: auto;
+}
+
+.tb-adminwrapper {
+  padding: 0 0 20px 20px;
+}
+
+@media (max-width: 1199px) {
+  .tb-sidebarwrapperholder {
+    z-index: 999;
+    position: absolute;
+    background: #fff;
+    transform: translate(300px);
+    border-left: 1px solid #eaeaea;
+    box-shadow: 10px -6px 30px 10px rgba(0, 0, 0, 0.06);
+  }
+  .tb-sidebarwrapperholder .tb-icongray {
+    transform: translate(-72px);
+  }
+  .et-offsidebar .tb-sidebarwrapperholder {
+    right: 0;
+    width: 100%;
+    left: auto;
+    transform: translate(0);
+  }
+  .et-offsidebar .tb-icongray {
+    transform: translate(0px);
+  }
+  .tb-adminwrapper {
+    padding: 0 20px 20px;
+  }
+  .am-header {
+    padding-right: 76px;
+  }
+}
+@media (max-width: 480px) {
+  .tb-subwrapper .fw-searchform .form-group .form-control {
+    padding: 0 22px 0 0 !important;
+  }
+}
+
+/*# sourceMappingURL=rtl.css.map */

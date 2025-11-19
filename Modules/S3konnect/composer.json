@@ -1,0 +1,30 @@
+{
+    "name": "amentotech/s3konnect",
+    "description": "",
+    "authors": [
+        {
+            "name": "AmentoTech",
+            "email": "info@amentotech.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\S3konnect\\": "app/",
+            "Modules\\S3konnect\\Database\\Factories\\": "database/factories/",
+            "Modules\\S3konnect\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\S3konnect\\Tests\\": "tests/"
+        }
+    }
+}

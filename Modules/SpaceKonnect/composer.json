@@ -1,0 +1,30 @@
+{
+    "name": "amentotech/spacekonnect",
+    "description": "",
+    "authors": [
+        {
+            "name": "AmentoTech",
+            "email": "info@amentotech.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SpaceKonnect\\": "app/",
+            "Modules\\SpaceKonnect\\Database\\Factories\\": "database/factories/",
+            "Modules\\SpaceKonnect\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\SpaceKonnect\\Tests\\": "tests/"
+        }
+    }
+}

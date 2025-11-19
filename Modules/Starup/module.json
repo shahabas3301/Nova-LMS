@@ -1,0 +1,14 @@
+{
+    "name": "Starup",
+    "alias": "starup",
+    "description": "StarUp LMS - Badges Addon For Lernen",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\Starup\\Providers\\StarupServiceProvider"
+    ],
+    "files": [
+        "/helpers/functions.php"
+    ]
+}
