@@ -28,3 +28,17 @@ Homestead.json
 .env.production
 .phpactor.json
 auth.json
+
+/storage/*.key
+/storage/app/*
+!/storage/app/public
+/storage/debugbar/*
+/storage/framework/*
+!/storage/framework/cache
+!/storage/framework/sessions
+!/storage/framework/views
+/storage/logs/*
+/storage/temp/*
+storage
+
+storage/framework/cache/

@@ -90,32 +90,32 @@ new class extends Component
                     ],
                 ],
             ],
-            [
-                'title' => __('sidebar.manage_packages'),
-                'icon'  => 'icon-folder-plus',
-                'permission' => 'can-manage-addons',
-                'routes' => [
-                    [
-                        'route' => 'admin.packages.index',
-                        'title' => __('sidebar.add_new_package'),
-                    ],
-                    [
-                        'route' => 'admin.packages.installed',
-                        'title' => __('sidebar.installed_packages'),
-                    ],
-                ],
-            ],
-            [
-                'title' => __('sidebar.upgrade'),
-                'icon'  => 'icon-upload-cloud',
-                'routes' => [
-                    [
-                        'route' => 'admin.upgrade',
-                        'title' => __('sidebar.upgrade'),
-                        'permission' => 'can-manage-upgrade',
-                    ],
-                ],
-            ],
+            // [
+            //     'title' => __('sidebar.manage_packages'),
+            //     'icon'  => 'icon-folder-plus',
+            //     'permission' => 'can-manage-addons',
+            //     'routes' => [
+            //         [
+            //             'route' => 'admin.packages.index',
+            //             'title' => __('sidebar.add_new_package'),
+            //         ],
+            //         [
+            //             'route' => 'admin.packages.installed',
+            //             'title' => __('sidebar.installed_packages'),
+            //         ],
+            //     ],
+            // ],
+            // [
+            //     'title' => __('sidebar.upgrade'),
+            //     'icon'  => 'icon-upload-cloud',
+            //     'routes' => [
+            //         [
+            //             'route' => 'admin.upgrade',
+            //             'title' => __('sidebar.upgrade'),
+            //             'permission' => 'can-manage-upgrade',
+            //         ],
+            //     ],
+            // ],
             [
                 'title' => __('sidebar.users'),
                 'icon'  => 'icon-users',
