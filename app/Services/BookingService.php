@@ -785,6 +785,7 @@ class BookingService
 
     public function createMeetingLink($booking)
     {
+        $meeingLink = null;
         if (empty($booking->slot['meta_data']['meeting_link'])) {
             $meeingLink = $this->createSessionMeetingLink($booking);
         }
@@ -799,6 +800,13 @@ class BookingService
             $meetingData['booking_calendar_id']  = $bookerAccSettings['google_calendar_info']['id'];
             $meetingData['meeting_link']         = $meeingLink ?? $booking->slot['meta_data']['meeting_link'];
             $meetingData['booking_access_token'] = $bookerAccSettings['google_access_token'];
+
+            if (!empty($meetingData['meeting_link'])) {
+                Log::info("Sharing meeting link with student", [
+                    'booking_id' => $booking->id,
+                    'meet_link' => $meetingData['meeting_link']
+                ]);
+            }
 
             $tutorId = $booking->tutor_id;
             $tutor = User::find($tutorId);
