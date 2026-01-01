@@ -88,12 +88,16 @@ class GoogleMeet implements MeetFusionDriverInterface
 
                 if (empty($conferenceData)) {
                     $conferenceData = new ConferenceData();
-                    $conferenceRequest = new CreateConferenceRequest();
-                    $conferenceRequest->setRequestId('lr-' . uniqid());
-                    $solutionKey = new ConferenceSolutionKey();
-                    $solutionKey->setType('hangoutsMeet');
-                    $conferenceRequest->setConferenceSolutionKey($solutionKey);
-                    $conferenceData->setCreateRequest($conferenceRequest);
+                    
+                    // Only request a new conference if we don't already have a meeting link
+                    if (empty($meetingLink)) {
+                        $conferenceRequest = new CreateConferenceRequest();
+                        $conferenceRequest->setRequestId('lr-' . uniqid());
+                        $solutionKey = new ConferenceSolutionKey();
+                        $solutionKey->setType('hangoutsMeet');
+                        $conferenceRequest->setConferenceSolutionKey($solutionKey);
+                        $conferenceData->setCreateRequest($conferenceRequest);
+                    }
                 }
 
                 $entryPoint = new EntryPoint();
