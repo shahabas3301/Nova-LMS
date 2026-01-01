@@ -24,10 +24,24 @@ class SlotBooking extends Model
      public static function boot() {
         parent::boot();
         self::deleting(function($booking) {
+            // Delete booking logs first
             $booking->bookingLog()->delete();
-            if ($booking->status == 'active') {
-                dispatch(new DeleteGoogleCalendarEvent($booking->booker, $booking->meta_data['event_id'] ?? null));
-                dispatch(new DeleteGoogleCalendarEvent($booking->bookee, $booking->slot->meta_data['event_id'] ?? null));
+            
+            // Delete Google Calendar events if they exist (regardless of booking status)
+            // Delete student's calendar event
+            if (!empty($booking->meta_data['event_id'])) {
+                dispatch(new DeleteGoogleCalendarEvent(
+                    $booking->booker, 
+                    $booking->meta_data['event_id']
+                ));
+            }
+            
+            // Delete tutor's calendar event
+            if ($booking->slot && !empty($booking->slot->meta_data['event_id'])) {
+                dispatch(new DeleteGoogleCalendarEvent(
+                    $booking->bookee, 
+                    $booking->slot->meta_data['event_id']
+                ));
             }
         });
     }
