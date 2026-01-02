@@ -84,33 +84,18 @@ class GoogleMeet implements MeetFusionDriverInterface
                 }
                 $service = new Calendar($client);
                 $bookingEvent = $service->events->get($eventData['booking_calendar_id'], $eventData['booking_event_id']);
-                $conferenceData = $bookingEvent->getConferenceData();
-
-                if (empty($conferenceData)) {
-                    $conferenceData = new ConferenceData();
-                    
-                    // Only request a new conference if we don't already have a meeting link
-                    if (empty($meetingLink)) {
-                        $conferenceRequest = new CreateConferenceRequest();
-                        $conferenceRequest->setRequestId('lr-' . uniqid());
-                        $solutionKey = new ConferenceSolutionKey();
-                        $solutionKey->setType('hangoutsMeet');
-                        $conferenceRequest->setConferenceSolutionKey($solutionKey);
-                        $conferenceData->setCreateRequest($conferenceRequest);
-                    }
-                }
-
-                $entryPoint = new EntryPoint();
-                $entryPoint->setEntryPointType('video'); 
-                $entryPoint->setUri($meetingLink); 
-                $conferenceData->setEntryPoints([$entryPoint]);
-                $bookingEvent->setConferenceData($conferenceData);
+                
+                // Simply add the meeting link to description and location
+                // Don't modify conference data to avoid creating a separate meeting
+                $newDescription = __('meetfusion::meetfusion.join_meeting') . $meetingLink . '<br />'. $bookingEvent->getDescription();
+                $bookingEvent->setDescription($newDescription);
+                $bookingEvent->setLocation($meetingLink);
 
                 $bookingEvent->setGuestsCanInviteOthers(false);
                 $bookingEvent->setGuestsCanModify(false);
                 $bookingEvent->setGuestsCanSeeOtherGuests(false);
 
-                $updatedEvent = $service->events->update($eventData['booking_calendar_id'], $eventData['booking_event_id'], $bookingEvent, ['conferenceDataVersion' => 1]);
+                $updatedEvent = $service->events->patch($eventData['booking_calendar_id'], $eventData['booking_event_id'], $bookingEvent);
             }
 
             return ['status' => Response::HTTP_OK, 'data' => ['link' => $meetingLink]];
